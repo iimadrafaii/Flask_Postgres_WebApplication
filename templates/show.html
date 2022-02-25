@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modifier mon activité</title>
+	<link rel="stylesheet" type="text/css" href="static/style_gen.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+<a href="/home"> <img src="/static/images/home.png" class="home" /> </a>
+	<div class="flex-column">
+		<div class="bonjour" style="margin-top: 50px;"> Consultez vos activités  </div>
+
+		<div class="flex-row wrapper">
+			{%for activity in activities%}
+
+				<div class="activite">
+				<div class="date"> {{activity.date}} </div>
+				<div class="content"> {{activity.activity}} </div>
+				</div>
+
+				{%endfor%}
+
+
+		</div>
+
+	</div>
+
+	<div class="signout"> <a href="/signout"> Se déconnecter </a> </div>
+
+
+
+</body>
+</html>
